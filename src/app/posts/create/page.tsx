@@ -11,7 +11,7 @@ export default function CreatePost() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from('posts')
       .insert([{ titulo, conteudo }]);
 
